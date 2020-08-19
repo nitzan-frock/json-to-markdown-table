@@ -8,6 +8,7 @@
   },
   "author": "Nitzan Frock",
   "license": "ISC",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "dependencies": {
     "lodash": "^4.17.15"
   }
