@@ -1,5 +1,6 @@
 {
-  "name": "@json-to-markdown-table/json-to-markdown-table",
+  "name": "json-to-markdown-table",
+  
   "version": "1.0.0",
   "description": "\"Convert JSON to a formatted console-ready markdown table.\"",
   "main": "index.js",
