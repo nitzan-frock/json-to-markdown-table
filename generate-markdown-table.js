@@ -8,13 +8,16 @@ const _ = require('lodash');
  * EXAMPLE: 
  * 
  * INPUT: 
- * [
- * 	{ headerOne: 'value', headerTwo: 'value2', headerThree: 'someMore-data' },
- * 	{ headerOne: 'value', headerTwo: 'value2', headerThree: 'someMore-data' }
- * ]
+ * const data = [
+ *	{ someFancyHeader: 'jkdff-g89u2ijknfjsdf', a: 321123, medium: 'so listen up...' },
+ *	{ someFancyHeader: 'kgajhkgd78ohkhb', a: 3, medium: 'here\'s a story about a guy' }
+ * ];
  *
  * OUTPUT:
- * 
+ *  some fancy_header    | a      | medium                    
+ *  -------------------- | ------ | --------------------------
+ *  jkdff-g89u2ijknfjsdf | 321123 | so listen up...           
+ *  kgajhkgd78ohkhb      | 3      | here's a story about a guy
  */
 module.exports = function generateMarkdownTable(rows, padding = 1) {
 	const maxLengthCols = longestLengthInCols(rows);
