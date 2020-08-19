@@ -7,10 +7,14 @@ const _ = require('lodash');
  *
  * EXAMPLE: 
  * 
+ * INPUT: 
  * [
- * 		{ headerOne: 'value', headerTwo: 'value2', headerThree: 'someMore-data', ...},
- * 		{ headerOne: 'value', headerTwo: 'value2', headerThree: 'someMore-data', ...},
+ * 	{ headerOne: 'value', headerTwo: 'value2', headerThree: 'someMore-data' },
+ * 	{ headerOne: 'value', headerTwo: 'value2', headerThree: 'someMore-data' }
  * ]
+ *
+ * OUTPUT:
+ * 
  */
 module.exports = function generateMarkdownTable(rows, padding = 1) {
 	const maxLengthCols = longestLengthInCols(rows);
@@ -33,11 +37,11 @@ module.exports = function generateMarkdownTable(rows, padding = 1) {
 };
 
 const humanize = str => {
-	return _.snakeCase(str).replace('_', ' ');
+	return _.snakeCase(str).replace(/-/g, ' ');
 };
 
-const longest = strings => {
-	return [...strings].sort((a, b) => b.length - a.length)[0].length;
+const longest = data => {
+	return data.map(d => '' + d).sort((a, b) => b.length - a.length)[0].length;
 };
 
 const longestLengthInCols = rows => {
