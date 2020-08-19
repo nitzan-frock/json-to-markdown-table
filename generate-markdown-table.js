@@ -14,7 +14,7 @@ const _ = require('lodash');
  * ];
  *
  * OUTPUT:
- *  some fancy_header    | a      | medium                    
+ *  some fancy header    | a      | medium                    
  *  -------------------- | ------ | --------------------------
  *  jkdff-g89u2ijknfjsdf | 321123 | so listen up...           
  *  kgajhkgd78ohkhb      | 3      | here's a story about a guy
@@ -40,7 +40,7 @@ module.exports = function generateMarkdownTable(rows, padding = 1) {
 };
 
 const humanize = str => {
-	return _.snakeCase(str).replace(/-/g, ' ');
+	return _.snakeCase(str).replace(/_/g, ' ');
 };
 
 const longest = data => {
