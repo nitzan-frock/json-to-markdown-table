@@ -9,14 +9,13 @@ const data = [
 	{ someFancyHeader: 'kgajhkgd78ohkhb', a: 3, medium: 'here\'s a story about a guy' }
 ];
 
-const table = generateMarkdownTable(data);
+console.log(generateMarkdownTable(data));
 ```
 
 and get your output as a nice console-ready string!
 
 ```
-console.log(table) >>
-some fancy_header    | a      | medium                    
+some fancy header    | a      | medium                    
 -------------------- | ------ | --------------------------
 jkdff-g89u2ijknfjsdf | 321123 | so listen up...           
 kgajhkgd78ohkhb      | 3      | here's a story about a guy
