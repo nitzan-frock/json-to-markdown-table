@@ -8,7 +8,13 @@
   },
   "author": "Nitzan Frock",
   "license": "ISC",
-  "repository": { "url": "git+https://github.com/nitzanf/json-to-markdown-table.git" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nitzanf/json-to-markdown-table"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/nitzanf"
+  },
   "dependencies": {
 	"lodash": "^4.17.15"
   }
